@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 #include <cstring>
-#include <vector.h>
+#include <vector>
 
 class Point{
 public:
@@ -35,8 +35,8 @@ public:
     }
 private:
     std::vector<double> m_xs;
-    std::double m_b;
-    std::double m_y;
+    double m_b;
+    double m_y;
 };
 
 #endif //POINT20180421
