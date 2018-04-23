@@ -15,6 +15,22 @@ public:
     void SetBWeight(double bWeightIn) {
         m_bWeight = bWeightIn;
     }
+public:
+    //计算一个权重点的正向输出和反向传递。
+    double FrontCal(Point point) {
+        double sum = 0;
+        for(uint32_t i = 0; i < m_weights.size(); ++i) {
+            sum += m_weights[i] * point.GetPoint(i);
+        }
+        return sum + b;
+    }
+
+    vector<double> BackCal(Point realPoint, double lr) {
+    
+    }
+    vector<double> BackCal(double delta){
+        
+    }
 private:
     Weights m_weights;
     double m_bWeight;
